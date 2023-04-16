@@ -79,7 +79,7 @@ const streamingSites = [
 ];
 
 export function createAnnouncementEmbed(entry: any, date: Date, upNext?: boolean): Embed {
-  let description = `Episode ${entry.episode} of [**${entry.media.title.english}**](${entry.media.siteUrl})${upNext ? "" : " has just Aired !!! <a:yay:833360479648743444>\n<@&833228900799873044> "}`;
+  let description = `Episode ${entry.episode} of [**${entry.media.title.english || entry.media.title.romaji}**](${entry.media.siteUrl})${upNext ? "" : " has just Aired !!! <a:yay:833360479648743444>\n<@&833228900799873044> "}`;
   if (entry.media.externalLinks && entry.media.externalLinks.length > 0) {
     const streams = [];
     entry.media.externalLinks.forEach((site: { site: string, url: string }) => {
