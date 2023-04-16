@@ -1,0 +1,28 @@
+query($watched: [Int!] = [0], $page: Int!) {
+  Page(page: $page) {
+    pageInfo {
+      currentPage
+      hasNextPage
+    }
+    media(id_in: $watched, sort: TITLE_ENGLISH) {
+      status
+      siteUrl
+      season
+      startDate {
+    	  year
+    	  month
+    	}
+      id
+      title {
+        userPreferred
+        english
+        english
+      }
+      nextAiringEpisode {
+        timeUntilAiring
+        episode
+        airingAt
+      }
+    }
+  }
+}
