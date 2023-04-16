@@ -23,7 +23,7 @@ export default new Command({
           channelStore.shows = channelStore.shows.filter(s => s !== m.id);
           return;
         }
-        let title = m.title.english || m.title.english;
+        let title = m.title.english || m.title.romaji;
         let nextLine = "";
         if (m.nextAiringEpisode && m.nextAiringEpisode.episode) {
             nextLine = `\n▸ [${title}](${m.siteUrl}) episode **${m.nextAiringEpisode.episode}** <t:${m.nextAiringEpisode.airingAt}:R>`;
