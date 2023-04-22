@@ -10,19 +10,19 @@ export default new Command({
   description: "Displays the next episode to air (in the next 7 days) that the current channel is watching.",
   handler: async (resolve, message, args, serverStore, channelStore, client) => {
     if (channelStore.shows.length === 0) {
-      message.addReaction("👎");
+      message.addReaction("a:error:865086676764983326");
       return resolve();
     }
 
     const response = await query(scheduleQuery, { watched: channelStore.shows, amount: 1, nextDay:  Math.round(getFromNextDays(7).getTime() / 1000)});
     if (response.errors) {
       console.log(response.errors);
-      message.addReaction("👎");
+      message.addReaction("a:error:865086676764983326");
       return resolve();
     }
 
     if (response.data.Page.airingSchedules.length === 0) {
-      message.addReaction("👎");
+      message.addReaction("a:error:865086676764983326");
       return resolve();
     }
 

@@ -11,7 +11,7 @@ export default new Command({
   description: "Lists all the anime that are being watched by this channel.",
   handler: async (resolve, message, args, serverStore, channelStore, client) => {
     if (channelStore.shows.length === 0) {
-      message.addReaction("👎");
+      message.addReaction("a:error:865086676764983326");
       return resolve();
     }
 

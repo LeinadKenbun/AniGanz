@@ -14,10 +14,10 @@ export default new Command({
         case "SERVER_OWNER": serverStore.permission = Type.SERVER_OWNER;
         default: flag = false;
       }
-      message.addReaction(flag ? "👍" : "👎");
+      message.addReaction(flag ? "a:done:865068195731341352" : "a:error:865086676764983326");
     }
     else
-      message.addReaction("👎");
+      message.addReaction("a:error:865086676764983326");
     resolve();
   }
 });

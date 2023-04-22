@@ -23,7 +23,7 @@ export default new Command({
       const response = await query(scheduleQuery, { page, watched: allWatching, dateStart: dateGreater, nextDay: dateLesser });
       if (response.errors) {
         console.log(response.errors)
-        message.addReaction("👎");
+        message.addReaction("a:error:865086676764983326");
         return;
       }
 

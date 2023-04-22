@@ -8,10 +8,10 @@ export default new Command({
   handler(resolve, message, args, serverStore, channelStore, client) {
     if (checkPermission(Type.SERVER_OWNER, message)) {
       serverStore.prefix = args[0];
-      message.addReaction("👍");
+      message.addReaction("a:done:865068195731341352");
     }
     else
-      message.addReaction("👎");
+      message.addReaction("a:error:865086676764983326");
     resolve();
   }
 });

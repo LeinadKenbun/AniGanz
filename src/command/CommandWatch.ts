@@ -29,7 +29,7 @@ export default new Command({
         .reduce((prev, curr, idx) => idx === 0 ? curr : prev + ", " + curr)}`);
     }
 
-    message.addReaction(failures.length === args.length ? "a:error:865086676764983326" : failures.length > 0 ? "😕" : "a:done:865068195731341352");
+    message.addReaction(failures.length === args.length ? "a:error:865086676764983326" : failures.length > 0 ? "a:pusabow:534674497257865216" : "a:done:865068195731341352");
     resolve();
   }
 });
