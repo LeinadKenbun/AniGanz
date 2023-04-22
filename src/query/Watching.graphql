@@ -16,7 +16,7 @@ query($watched: [Int!] = [0], $page: Int!) {
       title {
         userPreferred
         english
-        english
+        romaji
       }
       nextAiringEpisode {
         timeUntilAiring

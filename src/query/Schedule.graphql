@@ -14,7 +14,7 @@ query($page: Int = 0, $amount: Int = 50, $watched: [Int!]!, $nextDay: Int!, $dat
         title {
           userPreferred
           english
-          english
+          romaji
         }
         bannerImage
         coverImage {
