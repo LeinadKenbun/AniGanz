@@ -119,11 +119,12 @@ export function createAnnouncementEmbed(entry: any, date: Date, upNext?: boolean
   } as Embed;
 }
 
-function displayify(enumVal: string): string {
+function displayify(enumVal: any) {
+  // Ensure enumVal is a string before splitting
+  enumVal = String(enumVal);  
   const words = enumVal.split("_");
   for (let i = 0; i < words.length; i++)
     words[i] = words[i].substr(0, 1) + words[i].toLowerCase().substr(1);
-
   return words.join(" ");
 }
 
